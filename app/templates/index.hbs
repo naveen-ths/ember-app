@@ -1,0 +1,8 @@
+{{outlet}}
+{{#each model as |post|}}
+<div>
+  <div>{{post.title}}</div>
+  <div>{{post.body}}</div>
+  <div>{{#link-to 'posts.update' post.title}}Edit{{/link-to}}</div>
+</div>
+{{/each}}
