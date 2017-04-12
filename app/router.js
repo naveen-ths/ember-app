@@ -9,8 +9,15 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.route('contact');
-  this.route('rentals');
-  this.route('posts');
+  this.route('posts', function() {
+    this.route('view');
+    this.route('edit');
+    this.route('delete');
+    this.route('new');
+  });
+  this.route('groups', function() {
+    this.route('show', { path: '/:group_id' });
+  });
 });
 
 export default Router;

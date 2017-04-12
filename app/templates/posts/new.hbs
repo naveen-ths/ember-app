@@ -1,0 +1,10 @@
+<h2>Create New Posts</h2>
+  <div class="form-group">
+    <label for="post_title">Post Title</label>
+    {{input value=title placeholder="Title" class="form-control" id="post_title" }}
+  </div>
+  <div class="form-group">
+    <label for="post_body">Post Body</label>
+    {{textarea value=body placeholder="Body" class="form-control" id="post_body"}}
+  </div>
+    <button {{action "publishPost"}}>Publish</button>
